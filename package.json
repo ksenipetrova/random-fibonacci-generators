@@ -1,0 +1,24 @@
+{
+  "name": "random-fibonacci-generators",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "chi-squared": "^1.1.0",
+    "mathjs": "^3.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksenipetrova/random-fibonacci-generators.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ksenipetrova/random-fibonacci-generators/issues"
+  },
+  "homepage": "https://github.com/ksenipetrova/random-fibonacci-generators#readme"
+}
