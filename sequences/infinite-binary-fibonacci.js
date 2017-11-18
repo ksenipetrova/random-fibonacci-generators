@@ -1,3 +1,5 @@
+'use strict';
+
 var goldenRatio = (1 + Math.pow(5, .5)) / 2;
 
 function InfiniteBinaryFibonacci(start) {

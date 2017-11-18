@@ -1,3 +1,5 @@
+'use strict';
+
 function LinearGenerator(a, b, m, x0) {
 	this._a = a;
 	this._b = b;

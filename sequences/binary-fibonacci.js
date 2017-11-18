@@ -1,3 +1,5 @@
+'use strict';
+
 function BinaryFibonacci(n) {
 	this.sequence = this.generateSequence(n);
 	this.i = 0;

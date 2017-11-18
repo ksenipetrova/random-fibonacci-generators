@@ -1,3 +1,5 @@
+'use strict';
+
 function CombinedGenerator(random1, random2, aperiodic, choiceFunction) {
 	this._random1 = random1;
 	this._random2 = random2;

@@ -1,3 +1,5 @@
+'use strict';
+
 var isaac = require('isaac');
 
 function IsaacGenerator(seed) {
