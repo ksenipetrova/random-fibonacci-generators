@@ -6,8 +6,10 @@
   "dependencies": {
     "bignumber.js": "^4.1.0",
     "chi-squared": "^1.1.0",
+    "eslint": "4.12.0",
     "isaac": "0.0.5",
-    "mathjs": "^3.16.4"
+    "mathjs": "^3.16.4",
+    "nist-randomness-test-suite": "0.0.7"
   },
   "devDependencies": {},
   "scripts": {
