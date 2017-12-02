@@ -8,9 +8,9 @@ function InfiniteBinaryFibonacci(start) {
 
 InfiniteBinaryFibonacci.prototype.next = function () {
 	var result = getElement(this.index);
-	
+
 	this.index++;
-	
+
 	return result;
 };
 

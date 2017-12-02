@@ -40,27 +40,25 @@ combo.generateSequence(1000);
 
 var options = {
     valuesNumber: valuesNumber,
-    sequenceLength: 2>>10
+    sequenceLength: 1000
 };
 
 
-console.log('Частотный тест:            ' + getFrequencyTest(combo, options).pvalue);
+// console.log('Частотный тест:            ' + getFrequencyTest(combo, options).pvalue);
 
-/*
-console.log('Тест серий:                ' + getSerialTest(combo, options).pvalue);
+// console.log('Тест серий:                ' + getSerialTest(combo, options).pvalue);
 
-console.log('Интервальный тест:         ' + getIntervalTest(combo, options, 0, 0.5, 25).pvalue);
+// console.log('Интервальный тест:         ' + getIntervalTest(combo, options, 0, 0.5, 25).pvalue);
 
-console.log('Интервальный тест:         ' + getIntervalTest(combo, options, 0.5, 1, 25).pvalue);
+// console.log('Интервальный тест:         ' + getIntervalTest(combo, options, 0.5, 1, 25).pvalue);
 
-console.log('Покерный тест:             ' + getPokerTest(combo, options).pvalue);
+// console.log('Покерный тест:             ' + getPokerTest(combo, options).pvalue);
 
-console.log('Тест перестановок(t=7):    ' + getPermutationTest(combo, options, 7).pvalue);
+// console.log('Тест перестановок(t=7):    ' + getPermutationTest(combo, options, 7).pvalue);
 
-console.log('Тест перестановок(t=10):   ' + getPermutationTest(combo, options, 10).pvalue);
+// console.log('Тест перестановок(t=10):   ' + getPermutationTest(combo, options, 10).pvalue);
 
-console.log('Тест перестановок(t=17):   ' + getPermutationTest(combo, options, 17).pvalue);
-
+// console.log('Тест перестановок(t=17):   ' + getPermutationTest(combo, options, 17).pvalue);
 
 var correlationResult = getCorrelationTest(combo, options);
 
@@ -68,5 +66,3 @@ console.log('Корреляционный тест:       ' + 'c = ' + correlati
     (correlationResult.good? 'хорошее' : 'плохое') + ' значение.\n Границы: ' +
 	correlationResult.border1 + ' ' + correlationResult.border2
 );
-
-*/

@@ -8,7 +8,7 @@ function BinaryFibonacci(n) {
 BinaryFibonacci.prototype.generateSequence = function (n) {
 	var sequence = [1];
 	var oldSequence;
-	
+
 	while (sequence.length < n) {
 		oldSequence = sequence;
 		sequence = [];
@@ -22,19 +22,19 @@ BinaryFibonacci.prototype.generateSequence = function (n) {
 	}
 
 	console.log(sequence.length);
-	
+
 	return sequence;
 };
 
 BinaryFibonacci.prototype.next = function () {
 	var result = this.sequence[this.i];
-	
+
 	this.i++;
-	
+
 	if (this.i >= this.sequence.length) {
 		this.i = 0;
 	}
-	
+
 	return result;
 };
 

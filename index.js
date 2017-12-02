@@ -52,6 +52,6 @@ console.log('Тест перестановок(t=17):   ' + getPermutationTest(s
 var correlationResult = getCorrelationTest(sequence, valuesNumber);
 
 console.log('Корреляционный тест:       ' + 'c = ' + correlationResult.c + ', ' +
-    (correlationResult.good? 'хорошее' : 'плохое') + ' значение.\n Границы: ' + 
+    (correlationResult.good? 'хорошее' : 'плохое') + ' значение.\n Границы: ' +
 	correlationResult.border1 + ' ' + correlationResult.border2
 );

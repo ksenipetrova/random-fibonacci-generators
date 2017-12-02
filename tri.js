@@ -22,7 +22,7 @@ var t = new InfiniteTribonacci();
 const arr = [];
 
 for (let i = 0; i < 105; i++) {
-    arr.push(t.next() + 1);
+    arr.push(t.next());
 }
 
 console.log(arr.join(', '));
