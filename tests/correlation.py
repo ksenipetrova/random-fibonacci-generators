@@ -10,7 +10,7 @@ def getCorrelationTest(generator, options):
     firstValue = generator.next()
     previousValue = firstValue
 
-    for i in range(options['sequenceLength']):
+    for i in xrange(options['sequenceLength']):
         currentValue = generator.next();
 
         if i + 1 >= options['sequenceLength']:

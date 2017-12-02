@@ -33,7 +33,7 @@ def getIntervalTest (generator, options, alpha, beta, intervalLength):
     pt = 1
     statistics = 0
 
-    for i in range(intervalLength):
+    for i in xrange(intervalLength):
         if not i in observations:
             observations[i] = 0
 

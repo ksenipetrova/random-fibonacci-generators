@@ -5,11 +5,11 @@ def getPokerTest(generator, options):
     observations = {}
     observationType = None
 
-    for i in range(0, options['sequenceLength'] - 4, 5):
+    for i in xrange(0, options['sequenceLength'] - 4, 5):
         valuesCount = {}
         valueType = None
 
-        for j in range(5):
+        for j in xrange(5):
             valueType = generator.next()
 
             if not valueType in valuesCount:
@@ -33,7 +33,7 @@ def getPokerTest(generator, options):
 
     stirling2_5_i = [0, 1, 15, 25, 10, 1]
 
-    for r in range(5):
+    for r in xrange(5):
         p = tp * stirling2_5_i[r + 1]
 
         d -= 1

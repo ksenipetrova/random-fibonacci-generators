@@ -7,7 +7,7 @@ def getSerialTest(generator, options):
 
     pairsNumber = int(math.floor(float(options['sequenceLength']) / 2))
 
-    for i in range(pairsNumber):
+    for i in xrange(pairsNumber):
         observationType = str(generator.next()) + ';' + str(generator.next())
 
         if not observationType in observations:

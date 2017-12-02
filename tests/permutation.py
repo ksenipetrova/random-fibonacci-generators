@@ -5,10 +5,10 @@ def getPermutationTest(generator, options, groupLength):
     observations = {}
     observationType = None
 
-    for i in range(0, options['sequenceLength'] - groupLength + 1, groupLength):
+    for i in xrange(0, options['sequenceLength'] - groupLength + 1, groupLength):
         group = []
 
-        for j in range(groupLength):
+        for j in xrange(groupLength):
             group.append(generator.next())
 
         observationType = getPermutationType(group)
@@ -20,7 +20,7 @@ def getPermutationTest(generator, options, groupLength):
 
     permutationsNumber = 1
 
-    for i in range(2, groupLength):
+    for i in xrange(2, groupLength):
         permutationsNumber *= i
 
     expectedObservations = math.floor(float(options['sequenceLength']) / groupLength) / permutationsNumber
@@ -35,7 +35,7 @@ def getPermutationType(group):
         maxValue = -1
         maxIndex = -1
 
-        for i in range(r):
+        for i in xrange(r):
             if maxValue < group[i]:
                 maxValue = group[i]
                 maxIndex = i

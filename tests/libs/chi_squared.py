@@ -5,7 +5,7 @@ def getChiSquared(observations, expectedObservations, observationTypesNumber):
 
     observedKeys = observations.keys()
 
-    for i in range(len(observedKeys)):
+    for i in xrange(len(observedKeys)):
         statistics += (observations[observedKeys[i]] - expectedObservations) * (observations[observedKeys[i]] - expectedObservations)
 
     notObservedTypesNumber = observationTypesNumber - len(observedKeys)

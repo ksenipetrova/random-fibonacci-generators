@@ -4,7 +4,7 @@ def getFrequencyTest(generator, options):
     observations = {};
     observationType = None;
 
-    for i in range(options['sequenceLength']):
+    for i in xrange(options['sequenceLength']):
         observationType = generator.next();
 
         if not observationType in observations:
