@@ -10,10 +10,11 @@ from tests.interval import getIntervalTest
 from tests.poker import getPokerTest
 from tests.permutation import getPermutationTest
 from tests.correlation import getCorrelationTest
+from tests.next_bit import getNextBitTest
 
-valuesNumber = 2;
-r1 = BlumBlumShubGenerator();
-r2 = BlumBlumShubGenerator();
+valuesNumber = 1 << 32;
+r1 = IsaacGenerator();
+r2 = IsaacGenerator();
 f = InfiniteBinaryFibonacci();
 
 combo = CombinedGenerator([r1, r2], f, lambda arg: arg);
@@ -34,7 +35,8 @@ options = {
     'sequenceLength': 1 << 32
 };
 
-print 'Frequency test:      ' + str(getFrequencyTest(combo, options)['pvalue'])
+print 'Next bit test: ' + str(getNextBitTest(combo, options))
+# print 'Frequency test:      ' + str(getFrequencyTest(combo, options)['pvalue'])
 # print 'Serial test:         ' + str(getSerialTest(combo, options)['pvalue'])
 # print 'Interval test:         ' + str(getIntervalTest(combo, options, 0, 0.5, 25)['pvalue'])
 # print 'Interval test:         ' + str(getIntervalTest(combo, options, 0.5, 1, 25)['pvalue'])

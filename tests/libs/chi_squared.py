@@ -13,6 +13,12 @@ def getChiSquared(observations, expectedObservations, observationTypesNumber):
 
     statistics = float(statistics) / expectedObservations
 
+    print len(observedKeys)
+    print notObservedTypesNumber
+    print expectedObservations
+    print statistics
+    print observationTypesNumber
+
     pvalue = stats.chi2.cdf(x=statistics, df=observationTypesNumber - 1)
 
     return {
