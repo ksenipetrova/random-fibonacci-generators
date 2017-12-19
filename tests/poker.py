@@ -48,7 +48,7 @@ def getPokerTest(generator, options):
 
         statistics +=  float(diff * diff)  / expected
 
-    pvalue = stats.chi2.cdf(x=statistics, df=4)
+    pvalue = 1 - stats.chi2.cdf(x=statistics, df=4)
 
     return {
         'statistics': statistics,

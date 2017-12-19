@@ -12,12 +12,13 @@ from tests.permutation import getPermutationTest
 from tests.correlation import getCorrelationTest
 from tests.next_bit import getNextBitTest
 
-valuesNumber = 1 << 32;
-r1 = IsaacGenerator();
-r2 = IsaacGenerator();
-f = InfiniteBinaryFibonacci();
+valuesNumber = 2
+r1 = BlumBlumShubGenerator()
+r2 = BlumBlumShubGenerator()
+r3 = BlumBlumShubGenerator()
+f = InfiniteBinaryFibonacci()
 
-combo = CombinedGenerator([r1, r2], f, lambda arg: arg);
+combo = CombinedGenerator([r1, r2], f, lambda arg: arg)
 
 # bits = []
 
@@ -26,16 +27,16 @@ combo = CombinedGenerator([r1, r2], f, lambda arg: arg);
 
 # print bits
 
-combo.generateSequence(1000);
-combo.generateSequence(1000);
-combo.generateSequence(1000);
+combo.generateSequence(1000)
+combo.generateSequence(1000)
+combo.generateSequence(1000)
 
 options = {
     'valuesNumber': valuesNumber,
-    'sequenceLength': 1 << 32
-};
+    'sequenceLength': 1 << 17
+}
 
-print 'Next bit test: ' + str(getNextBitTest(combo, options))
+# print 'Next bit test: ' + str(getNextBitTest(combo, options))
 # print 'Frequency test:      ' + str(getFrequencyTest(combo, options)['pvalue'])
 # print 'Serial test:         ' + str(getSerialTest(combo, options)['pvalue'])
 # print 'Interval test:         ' + str(getIntervalTest(combo, options, 0, 0.5, 25)['pvalue'])

@@ -50,7 +50,7 @@ def getIntervalTest (generator, options, alpha, beta, intervalLength):
 
     statistics +=  float(diff * diff)  / (s * pt);
 
-    pvalue = stats.chi2.cdf(x=statistics, df=intervalLength)
+    pvalue = 1 - stats.chi2.cdf(x=statistics, df=intervalLength)
 
     return {
         'statistics': statistics,
