@@ -1,4 +1,4 @@
-CC = /usr/bin/gcc
+CC = C:\MinGW\libexec\gcc\mingw32\6.3.0
 GCCFLAGS = -c -Wall
 ROOTDIR = .
 SRCDIR = $(ROOTDIR)/src

@@ -13,9 +13,6 @@ def getNextBitTest(generator, options):
 
     l = int(round(math.log(n, 2) - 2))
 
-    print alpha
-    print l
-
     layer_l = {} # ключ - битовая последовательность, например, 101, значение массив из двух элементов:
                  # [0, 1]: индекс 0 - это сколько если добавить 0, 1010, индекс 1 - соответсвует 1011
 
@@ -46,8 +43,6 @@ def getNextBitTest(generator, options):
     for i in xrange(n):
         scan(i)
 
-    print layer_l
-
     obserservedSequences = layer_l.keys()
 
     Y_obs = 0
@@ -66,9 +61,6 @@ def getNextBitTest(generator, options):
         if predict_0 > alpha or predict_1 > alpha:
             Y_obs += 1
 
-    print layer_l
-
     p_value = scipy.special.erfc((Y_obs - mean) / math.sqrt(2 * deviation)) / 2.
 
     return p_value
-

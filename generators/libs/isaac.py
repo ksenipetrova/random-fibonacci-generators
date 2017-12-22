@@ -55,7 +55,7 @@ class Isaac(object):
             f.close()
         else:
             for x in xrange(256):
-                self.randrsl[x] = random.__randint__(1,4294967294)
+                self.randrsl[x] = random.randint(1,4294967294)
 
         self.__randinit__(True)
 
