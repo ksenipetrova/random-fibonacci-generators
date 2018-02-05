@@ -50,6 +50,8 @@ class BlumBlumShub(object):
         seed = random.getrandbits(length)
         self.setSeed(seed)
 
+        print 'bbs: n: ', self.n, ', seed: ', seed
+
     def setSeed(self, seed):
         """
         Sets or resets the seed value and internal state.
@@ -89,5 +91,3 @@ if __name__ == "__main__":
     print("count: 5000000")
     for i in xrange (5000000):
         print(bbs.next(32))
-
-

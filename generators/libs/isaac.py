@@ -57,6 +57,8 @@ class Isaac(object):
             for x in xrange(256):
                 self.randrsl[x] = random.randint(1,4294967294)
 
+        print 'isaac, randrsl: ', self.randrsl
+
         self.__randinit__(True)
 
     def rand(self, **kwargs):

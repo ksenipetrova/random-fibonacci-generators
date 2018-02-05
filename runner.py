@@ -22,7 +22,7 @@ parser.add_argument('--generators', type=str, help='Используемые г�
 parser.add_argument('--tests', type=str, help='Используемые тесты через запятую. Возможные значения: frequency, correlation, interval, permutation, poker, serial, pnb.Вместо всех тестов Кнута можно написать knuth.')
 parser.add_argument('--bits', help='Число бит в сгенерированных элементах', type=int, default=32)
 parser.add_argument('--number', help='Количество элементов в сгенерированной последовательности ', type=int, default=1000)
-parser.add_argument('--out', help='Сохранить последовательность в файл', type=str, default='out')
+parser.add_argument('--out', help='Сохранить последовательность в файл', type=str)
 
 args = parser.parse_args()
 
@@ -40,7 +40,7 @@ for i in xrange(len(generators)):
     if generators[i] == 'bbs':
         generators[i] = BlumBlumShubGenerator(result_bits=args.bits)
     if generators[i] == 'isaac':
-        generators[i] = IsaacGenerator(binary=args.bits==1)
+        generators[i] = IsaacGenerator(result_bits=args.bits)
 
 generator = CombinedGenerator(generators, sequence, lambda arg: arg)
 
@@ -54,7 +54,6 @@ if args.out:
         byte = 0
         for j in xrange(8):
             bit = generator.next()
-            print bit
             byte += bit << (7 - j)
 
         bytes.append(byte)
@@ -105,8 +104,6 @@ for i in xrange(len(tests)):
         print 'Poker test:             ' + str(getPokerTest(generator_copy, options)['pvalue'])
 
     if tests[i] == 'permutation':
-         print 'Permutation test(t=7):    ' + str(getPermutationTest(generator_copy, options, 7)['pvalue'])
-         print 'Permutation test(t=10):    ' + str(getPermutationTest(generator_copy, options, 10)['pvalue'])
          print 'Permutation test(t=17):    ' + str(getPermutationTest(generator_copy, options, 17)['pvalue'])
 
     if tests[i] == 'pnb':
